@@ -1,0 +1,49 @@
+.inputTaskContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.inputTaskContainer input {
+    display: flex;
+    flex: 1;
+
+    height: 3.375rem;
+    padding: 0 1rem ;
+
+    background-color: var(--gray-600);
+    outline: 1px solid var(--gray-700);
+    border-radius: 8px;
+    border: 0;    
+    color: white;
+}
+
+.inputTaskContainer input:focus {
+    outline: 1px solid var(--purple-dark);
+}
+
+.inputTaskContainer button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    height: 3.375rem;
+    padding: 0 1rem ;
+
+    background-color: var(--blue);
+    color: white;
+    border-radius: 8px;
+    border: 0;
+
+    font-size: 0.875rem;
+
+    cursor: pointer;
+} 
+
+.inputTaskContainer button svg {
+    margin-top: 0.12rem;
+}
+
+.inputTaskContainer button:hover {
+    background-color: var(--blue-dark); 
+}

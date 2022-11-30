@@ -1,0 +1,30 @@
+.tasksAccounterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 4rem;
+
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.tasksAccounterContainer div  span:last-child {
+    background-color: var(--gray-700);
+    color: white;
+    
+    border-radius: 8px;
+    padding: 0 6px;
+
+    font-size: 0.875rem;
+
+    margin-left: 0.6rem;
+} 
+
+.createTasks {
+    color: var(--blue-dark);
+}
+
+.doneTasks {
+    color: var(--purple-dark);
+}
