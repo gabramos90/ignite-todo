@@ -1,0 +1,64 @@
+button {
+  all: unset
+}
+
+.tasksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    
+    background-color: var(--gray-500);
+    cursor: pointer;
+}
+
+.tasksContainer div {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxRoot {
+  background-color: transparent;
+  width: 17px;
+  height: 17px;
+  border-radius: 9999px;
+  border: 2px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+[data-state="checked"] {
+  background-color: var(--purple);
+  overflow: hidden;
+  object-fit: fill;
+  border: 2px solid var(--purple);
+}
+
+.checkboxRoot:hover {
+  background-color: var(--blue-dark);
+} 
+
+.chekedIcon{
+  margin-top: 0.3rem;
+  margin-left: -0.07rem;
+}
+
+.label {
+  color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+  user-select: none;
+  font-size: 0.875rem;
+}
+
+[data-state="checked"]~label{
+  text-decoration: line-through;
+  color: var(--gray-400);
+}

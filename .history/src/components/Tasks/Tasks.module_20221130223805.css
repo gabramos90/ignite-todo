@@ -1,0 +1,44 @@
+button {
+  all: unset
+}
+
+.tasksContainer {
+    display: flex;
+    align-items: center;
+
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    
+    background-color: var(--gray-500);
+
+}
+
+.checkboxRoot {
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 9999px;
+  border: 2px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkboxRoot:hover {
+  background-color: var(--blue-dark);
+}
+.checkboxRoot:focus {
+
+}
+
+.checkboxIndicator {
+  color: var(--violet11);
+}
+
+.label {
+  color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+  user-select: none;
+}
