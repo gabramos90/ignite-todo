@@ -27,9 +27,7 @@ export function InputTask({ handleNewTask }: Props) {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        {...register('newTitle', {
-          onChange: (e) => setNewTitle(e.target.value),
-        })}
+        {...register('newTitle')}
         required
       />
       <button type="submit">

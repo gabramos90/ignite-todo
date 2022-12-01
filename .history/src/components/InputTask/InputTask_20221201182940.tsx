@@ -19,6 +19,10 @@ export function InputTask({ handleNewTask }: Props) {
     reset()
   }
 
+  function taskSubmit() {
+    setNewTitle(target.value)
+  }
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

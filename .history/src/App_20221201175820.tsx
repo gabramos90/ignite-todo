@@ -31,22 +31,13 @@ export function App() {
     },
   ])
 
-  function handleNewTask(taskTitle: string) {
-    setTasks([
-      ...tasks,
-      {
-        id: Date.now(),
-        title: taskTitle,
-        isDone: false,
-      },
-    ])
-  }
+  function handleNewTask()
 
   return (
     <div>
       <Header />
       <div className={styles.wrapper}>
-        <InputTask handleNewTask={handleNewTask} />
+        <InputTask />
         <TasksAccounter tasks={tasks} />
       </div>
     </div>

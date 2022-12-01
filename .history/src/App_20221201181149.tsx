@@ -46,7 +46,7 @@ export function App() {
     <div>
       <Header />
       <div className={styles.wrapper}>
-        <InputTask handleNewTask={handleNewTask} />
+        <InputTask />
         <TasksAccounter tasks={tasks} />
       </div>
     </div>

@@ -2,7 +2,6 @@ import { PlusCircle } from 'phosphor-react'
 import styles from './InputTask.module.css'
 
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
 
 interface Props {
   handleNewTask: (taskTitle: string) => void
@@ -10,12 +9,11 @@ interface Props {
 
 export function InputTask({ handleNewTask }: Props) {
   const { register, handleSubmit, reset } = useForm()
-  const [newTiTle, setNewTitle] = useState('')
+  const [newTaskTiTle, setNewTaskTitle] = use
 
   function onSubmit(data: any) {
     console.log(data)
 
-    handleNewTask(newTiTle)
     reset()
   }
 
@@ -27,9 +25,7 @@ export function InputTask({ handleNewTask }: Props) {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        {...register('newTitle', {
-          onChange: (e) => setNewTitle(e.target.value),
-        })}
+        {...register('title')}
         required
       />
       <button type="submit">

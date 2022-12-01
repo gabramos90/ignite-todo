@@ -19,6 +19,8 @@ export function InputTask({ handleNewTask }: Props) {
     reset()
   }
 
+  setNewTitle(...newTiTle, setNewTitle)
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -27,9 +29,7 @@ export function InputTask({ handleNewTask }: Props) {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        {...register('newTitle', {
-          onChange: (e) => setNewTitle(e.target.value),
-        })}
+        {...register('t)}
         required
       />
       <button type="submit">

@@ -19,6 +19,7 @@ export function InputTask({ handleNewTask }: Props) {
     reset()
   }
 
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

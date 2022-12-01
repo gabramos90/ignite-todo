@@ -10,12 +10,11 @@ interface Props {
 
 export function InputTask({ handleNewTask }: Props) {
   const { register, handleSubmit, reset } = useForm()
-  const [newTiTle, setNewTitle] = useState('')
+  const [newTiTle, setNewTaskTitle] = useState('')
 
   function onSubmit(data: any) {
     console.log(data)
 
-    handleNewTask(newTiTle)
     reset()
   }
 
@@ -27,9 +26,7 @@ export function InputTask({ handleNewTask }: Props) {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        {...register('newTitle', {
-          onChange: (e) => setNewTitle(e.target.value),
-        })}
+        {...register('title')}
         required
       />
       <button type="submit">
