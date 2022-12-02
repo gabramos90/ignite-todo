@@ -1,0 +1,62 @@
+import { useState } from 'react'
+import styles from './App.module.css'
+
+import { Header } from './components/Header/Header'
+import { InputTask } from './components/InputTask/InputTask'
+import { TasksAccounter } from './components/TasksAccounter/TasksAccounter'
+import './global.css'
+
+export interface ITask {
+  id: string
+  title: string
+  isDone: boolean
+}
+
+export function App() {
+  const [tasks, setTasks] = useState<ITask[]>([
+    {
+      id: '2022-11-20T14:20:02.7620',
+      title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+      isDone: true,
+    },
+    {
+      id: '2022-11-20T14:20:07.7620',
+      title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+      isDone: false,
+    },
+    {
+      id: '2022-11-20T14:20:04.7620',
+      title: 'Tarefa três.',
+      isDone: true,
+    },
+  ])
+
+  function handleNewTask(taskTitle: string) {
+    setTasks([
+      ...tasks,
+      {
+        id: crypto.randomUUID(),
+        title: taskTitle,
+        isDone: false,
+      },
+    ])
+  }
+
+  function handleDeleteTask(TaskId: string) {
+    console.log('Eu clico, mas o item não é deletado :(')
+    const newTasks = tasks.filter((task: ITask) => task.id !== taskId)
+
+    setTasks(newTasks)
+    event?.preventDefault()
+  }
+
+  return (
+    <div>
+      <Header />
+      <div className={styles.wrapper}>
+        <InputTask handleNewTask={handleNewTask} />
+        <TasksAccounter tasks={tasks} onDelete={handleDeleteTask} />
+      </div>
+    </div>
+  )
+}
